@@ -1,0 +1,39 @@
+  body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffd6e0, #c2f0fc);
+      font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .container {
+      display: flex;
+      gap: 20px;
+  }
+  
+  button {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(45deg, #ff7eb3, #ff758c);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+  }
+  
+  button:nth-child(2) {
+      background: linear-gradient(45deg, #6a11cb, #2575fc);
+  }
+  
+  button:nth-child(3) {
+      background: linear-gradient(45deg, #00c9a7, #92fe9d);
+      color: #333;
+  }
+  
+  button:hover {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  }

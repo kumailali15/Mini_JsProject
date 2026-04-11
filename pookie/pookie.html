@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I KNEW IT !!!</title>
+    <link rel="stylesheet" href="pookie.css">
+</head>
+
+<body>
+    <h1>I KNEW IT !!!</h1>
+
+    <script>
+        // Falling flowers/hearts effect
+        const flowerCount = 40; // Number of falling elements
+        for (let i = 0; i < flowerCount; i++) {
+            const flower = document.createElement('div');
+            flower.classList.add('flower');
+
+            // Random horizontal start
+            flower.style.left = Math.random() * window.innerWidth + 'px';
+            // Random animation duration
+            flower.style.animationDuration = (3 + Math.random() * 3) + 's';
+            // Random opacity
+            flower.style.opacity = Math.random() * 0.8 + 0.2;
+            // Random size
+            const size = 20 + Math.random() * 20;
+            flower.style.width = size + 'px';
+            flower.style.height = size + 'px';
+
+            document.body.appendChild(flower);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./image/pexels-gabby-k-5874597.jpg);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#heading {
+    font-size: 6vw;
+    color: white;
+    text-shadow: 2px 2px 15px black;
+    margin-top: 50px;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5vw;
+    margin-top: 5vh;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1.5vw 3vw;
+    font-size: 2vw;
+    background-color: rgb(216, 107, 125);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s all;
+    position: relative;
+    min-width: 80px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+@media(max-width:768px) {
+    .btn {
+        font-size: 4vw;
+        padding: 3vw 6vw;
+    }
+    #heading {
+        font-size: 10vw;
+    }
+}
+
+.flower {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-image: url(./image/pexels-gabby-k-5874597.jpg);
+    background-size: cover;
+    pointer-events: none;
+    animation-name: fall;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-50px) rotate(0deg) translateX(0px);
+        opacity: 1;
+    }
+    25% {
+        transform: translateY(25vh) rotate(90deg) translateX(20px);
+    }
+    50% {
+        transform: translateY(50vh) rotate(180deg) translateX(-15px);
+    }
+    75% {
+        transform: translateY(75vh) rotate(270deg) translateX(15px);
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg) translateX(0px);
+        opacity: 0;
+    }
+}
